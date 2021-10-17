@@ -1,0 +1,101 @@
+\documentclass[12pt]{article}
+\usepackage[a4paper,left=1cm,right=1cm,top=1cm,bottom=1cm,landscape]{geometry}
+\usepackage{graphicx}
+\usepackage{ragged2e}
+\usepackage{multicol}
+\usepackage{array}
+\usepackage[none]{hyphenat}
+\usepackage{tabularx}
+\usepackage{calligra} 
+\usepackage{wallpaper}
+\usepackage{datatool}
+\usepackage{csquotes}
+\usepackage[nolinks,final,forget]{qrcode}
+\usepackage{color}
+%\usepackage{showframe}
+
+\definecolor{blue}{rgb}{0,0,1}
+\definecolor{red}{cmyk}{0, 1, 1, 0.2}
+\definecolor{gold}{cmyk}{0,0.16,1,0.50}
+
+
+\DTLloaddb{names}{data.csv}
+
+\begin{document}
+	
+	\linespread{1}\selectfont
+	\pagestyle{empty}
+	\TileWallPaper{1\paperwidth}{1\paperheight}{background.pdf}
+	
+	\DTLforeach{names}{\prefix=Prefix, \name=Name}
+	{
+		
+		\vspace*{-0.45cm}
+		
+		\begin{minipage}[r]{1.5in}
+			\centering
+			\vspace{0.5cm}
+			\begin{center}
+				\includegraphics[scale=0.15]{NITPY-logo.png}	
+			\end{center}
+		\end{minipage}
+		\begin{minipage}[r]{8in}
+			\centering
+			\begin{center}
+				\Large{
+					\textbf{\LARGE \color{blue} National Institute of Technology Puducherry, Karaikal}\\
+					\vspace{-0.20cm}
+					\textbf{\large \color{blue} An Institution of National Importance}\\
+					\vspace{-0.20cm}
+					\textbf{\large \color{blue} under the Ministry of Education, Government of India}\\
+					\vspace{-0.20cm}
+					\textbf{\large \color{blue} Thiruvettakudy, Karaikal, Union Territory of Puducherry, 609 609, India}\\
+				}
+			\end{center}
+		\end{minipage}
+		
+		\vspace{-0.1cm}
+		
+		\begin{center}
+			\textbf{\LARGE \color{red} $2^{nd}$ National Conference on Communication Systems (NCOCS-2020)}\\ 
+			\vspace{0.25cm}
+			{\large \textbf{in association with}}
+		\end{center}
+	
+		\vspace{-0.8cm}
+	
+		\begin{table}[h!]
+			\centering
+			\large
+			\begin{tabular}{lll}
+				\multicolumn{1}{c}{\begin{tabular}[c]{@{}c@{}}\includegraphics[scale=0.30]{ISTE-logo.pdf}\end{tabular}}&  & \multicolumn{1}{c}{\begin{tabular}[c]{@{}c@{}}\includegraphics[scale=0.30]{IEI-logo.pdf}\end{tabular}}                                                                                                                                                                                                                      \\
+				\multicolumn{1}{c}{\begin{tabular}[c]{@{}c@{}}\color{red} Indian Society for Technical Education\\ \color{red} Under the Societies Registration Act XXI of 1860\\ \color{red} New Delhi, India\end{tabular}} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{\begin{tabular}[c]{@{}c@{}}\color{red} The Institution of Engineers (India)\\ \color{red} Established 1920, Incorporated by Royal Charter 1935\\ \color{red} Puducherry State Centre, Puducherry\end{tabular}}
+			\end{tabular}
+		\end{table}
+		
+		\vspace{-0.5cm}
+		
+		\begin{center}
+			\calligra \Huge\textbf{\color{gold} Certificate}
+		\end{center}
+			
+		\begin{tabularx}{0.92\linewidth}{ l X }
+			& 
+			\Large
+			{This is to certify that \textbf{\color{blue} \prefix~\name} has served as the Patron for the $2^{nd}$ National Conference on Communication Systems (NCOCS-2020), organized by the Department of Electronics and Communication Engineering, National Institute of Technology Puducherry, Karaikal, on November 21, 2020.}
+			\\
+		\end{tabularx}
+		
+		\vspace{2cm}
+		\begin{table}[h!]
+			\centering
+			\normalsize
+			\begin{tabular}{>{\centering\arraybackslash}p{5cm}>{\centering\arraybackslash}p{5cm}>{\centering\arraybackslash}p{5cm}>{\centering\arraybackslash}p{8cm}}
+				\textbf{Dr. R. Boopathi Rani} & \textbf{Dr. V. P. Harigovindan} & \textbf{Dr. G. Lakshmi Sutha} & \textbf{Prof. K. Sankaranarayanasamy} \\
+				Secretary        		      & Secretary             	 	  & Chairperson 				   & Director, NIT Puducherry, Karaikal    \\                      
+			\end{tabular}
+		\end{table}
+		\newpage
+	}
+	
+\end{document} 
